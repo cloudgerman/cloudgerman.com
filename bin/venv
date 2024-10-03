@@ -1,0 +1,36 @@
+#!/bin/zsh
+
+who=$(whoami)
+if [[ "$who" == "root" ]]; then
+  echo "ERROR: you can't activate the environment as root"
+  return
+fi
+
+BOLD=$(tput bold)
+NORMAL=$(tput sgr0)
+
+BIN=$(dirname -- $(readlink -f -- $0))
+echo "BIN: $BIN"
+
+VENV_DIR="$BIN/../.$(basename $(dirname $BIN))"
+echo "VENV: $VENV_DIR"
+
+OS=$(uname -o)
+echo "OS: $OS"
+
+if [[ "$OS" == "Android" ]]; then
+  export CPPFLAGS=" -D__ANDROID_API__=$(getprop ro.build.version.sdk) "
+  export GRPC_PYTHON_BUILD_SYSTEM_CARES="True"
+  export AR=llvm-ar
+  VENV_ARGS="--system-site-packages"
+else
+  VENV_ARGS=
+fi
+
+if [ ! -d $VENV_DIR ]; then
+  echo "${BOLD}Creating virtual env${NORMAL}"
+  python3 -m venv $VENV_ARGS $VENV_DIR
+fi
+
+echo "${BOLD}Activating virtual env${NORMAL}"
+source $VENV_DIR/bin/activate

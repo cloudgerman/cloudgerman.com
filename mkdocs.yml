@@ -1,0 +1,63 @@
+site_name: cloudgerman.com
+site_description: "Germán, in the Cloud"
+site_url: https://cloudgerman.com
+theme:
+    favicon: assets/images/favicon.ico
+    features:
+        - content.code.copy
+        - navigation.sections
+        - navigation.top
+    icon:
+        repo: material/git
+    language: en
+    logo: assets/images/me.png
+    name: material
+    palette:
+        primary: custom
+        scheme: default
+# extra_css:
+#    - stylesheets/extra.css
+# extra_javascript:
+#  - javascripts/mathjax.js
+#  - https://polyfill.io/v3/polyfill.min.js?features=es6
+#  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+plugins:
+    - blog
+    - search
+    - rss:
+          match_path: blog/posts/.*
+          date_from_meta:
+            as_creation: date
+          categories:
+            - categories
+            - tags
+          image:
+              https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png
+    - tags:
+          enabled: true
+          tags_file: tags.md
+extra:
+    social:
+        - icon: material/github
+          link: https://github.com/cloudgerman
+        - icon: material/rss
+          link: https://cloudgerman.com/
+copyright: Copyright &copy; 2024 Germán Fuentes Capella
+repo_url: https://github.com/cloudgerman/cloudgerman.com
+markdown_extensions:
+    - attr_list
+    - footnotes
+    - md_in_html
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+

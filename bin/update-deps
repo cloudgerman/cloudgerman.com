@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+BIN=$(dirname -- $(readlink -f -- $0))
+source $BIN/venv
+
+echo "${BOLD}Installing python dependencies${NORMAL}"
+
+if [[ "$OS" != "Android" ]]; then
+  python3 -m pip install --upgrade pip
+fi
+
+pip install mkdocs mkdocs-material mkdocs-rss-plugin
+
