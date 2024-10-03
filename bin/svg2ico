@@ -21,7 +21,6 @@ args = parser.parse_args()
 
 with tempfile.TemporaryDirectory() as d:
     tmp = path.join(d, "file.png")
-    tmp = "file.png"
 
     cmd = f"convert -background transparent -size 1024x1024 {args.svg} {tmp}"
     print(cmd)
@@ -30,10 +29,10 @@ with tempfile.TemporaryDirectory() as d:
     resizing = [f"\\( -clone 0 -resize {s}x{s} -extent {s}x{s} \\)" for s in _SIZES]
     cmd = " ".join(["convert",
                     tmp,
-                    "-background white",
+                    "-background transparent",
                     " ".join(resizing),
                     "-delete 0",
-                    "-alpha off",
+                    #"-alpha off",
                     "-colors 256",
                     args.ico,
                     ])
