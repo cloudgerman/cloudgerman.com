@@ -1,0 +1,44 @@
+#!env python3
+# see: https://legacy.imagemagick.org/Usage/thumbnails/#favicon
+# remember to open the ico file with a browser
+
+import argparse
+import subprocess
+import tempfile
+
+from os import path
+
+
+_SIZES = (16, 24, 32, 40, 48, 64, 96, 128, 256)
+
+
+def _args():
+    parser = argparse.ArgumentParser(prog='svg2ico',
+                                     description='converts a SVG file to ICO',
+                                     )
+    parser.add_argument('svg')
+    parser.add_argument('ico')
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    args = _args()
+    with tempfile.TemporaryDirectory() as d:
+        tmp = path.join(d, "file.png")
+
+        cmd = f"convert -size 1024x1024 {args.svg} {tmp}"
+        print(cmd)
+        subprocess.run([cmd], shell=True, check=True)
+
+        resizing = [f"\\( -clone 0 -resize {s}x{s} -extent {s}x{s} \\)" for s in _SIZES]
+        cmd = " ".join(["convert",
+                        tmp,
+                        "-background white",
+                        " ".join(resizing),
+                        "-delete 0",
+                        "-alpha off",
+                        "-colors 256",
+                        args.ico,
+                        ])
+        print(cmd)
+        subprocess.run([cmd], shell=True, check=True)

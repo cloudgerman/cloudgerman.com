@@ -1,22 +1,27 @@
-site_name: cloudgerman.com
+site_name: Germán, in the Cloud
 site_description: "Germán, in the Cloud"
 site_url: https://cloudgerman.com
+
+not_in_nav: |
+  /privacy.md
+  /disclaimer.md
+
 theme:
     favicon: assets/images/favicon.ico
-    features:
-        - content.code.copy
-        - navigation.sections
-        - navigation.top
+    #features:
+    #- content.code.copy
+    #- navigation.sections
+    #- navigation.top
     icon:
         repo: material/git
     language: en
-    logo: assets/images/me.png
+    logo: assets/images/logo.svg
     name: material
     palette:
         primary: custom
         scheme: default
-# extra_css:
-#    - stylesheets/extra.css
+extra_css:
+    - stylesheets/extra.css
 # extra_javascript:
 #  - javascripts/mathjax.js
 #  - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -37,13 +42,18 @@ plugins:
           enabled: true
           tags_file: tags.md
 extra:
+    generator: false
     social:
+        - icon: material/linkedin
+          link: https://www.linkedin.com/in/germanfuentescapella/?locale=en_US
         - icon: material/github
           link: https://github.com/cloudgerman
         - icon: material/rss
-          link: https://cloudgerman.com/
-copyright: Copyright &copy; 2024 Germán Fuentes Capella
-repo_url: https://github.com/cloudgerman/cloudgerman.com
+          link: https://cloudgerman.com/feed_rss_created.xml
+copyright: >
+  Copyright &copy; 2024 Germán Fuentes Capella
+  <div><a href="/privacy">Privacy</a> <a href="/disclaimer">Disclaimer</a></div>
+# repo_url: https://github.com/cloudgerman/cloudgerman.com
 markdown_extensions:
     - attr_list
     - footnotes
