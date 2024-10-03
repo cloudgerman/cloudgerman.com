@@ -1,3 +1,6 @@
+# read the docs:
+# https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/
+#
 site_name: Germán, in the Cloud
 site_description: "Germán, in the Cloud"
 site_url: https://cloudgerman.com
