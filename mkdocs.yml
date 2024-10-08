@@ -11,7 +11,8 @@ not_in_nav: |
 
 theme:
     favicon: assets/images/favicon.ico
-    #features:
+    features:
+        - content.footnote.tooltips
     #- content.code.copy
     #- navigation.sections
     #- navigation.top
