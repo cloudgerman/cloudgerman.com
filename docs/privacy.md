@@ -2,7 +2,7 @@
 title: Privacy Notice
 ---
 There is no data being collected by the site owner by using this site.
-Please read the [Disclaimer](/disclaimer) for further information
+Please read the [Disclaimer](disclaimer.md) for further information
 
 The following services are required to provide this blog to you:
 
