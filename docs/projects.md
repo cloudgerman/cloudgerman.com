@@ -7,7 +7,7 @@ Thunderbird project.
 
 I find myself using it quite often, and build a cli... now I can query it without leaving the terminal!
 
-[Link to Github](https://github.com/cloudgerman/ispdb)
+[:material-github: cloudgerman/ispdb](https://github.com/cloudgerman/ispdb)
 
 ## mio
 
@@ -16,4 +16,4 @@ all my data right under my nose and started creating scripts that allow me to ex
 
 Happy backups!
 
-[Link to Github](https://github.com/cloudgerman/mio)
+[:material-github: cloudgerman/mio](https://github.com/cloudgerman/mio)
