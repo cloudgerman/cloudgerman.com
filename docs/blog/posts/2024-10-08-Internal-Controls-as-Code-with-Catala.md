@@ -3,10 +3,14 @@ date:
   created: 2024-10-08
 links:
     - Catala lang: https://catala-lang.org/
+categories:
+    - Internal Controls
+    - Programming language
+    - ICaC
 
 draft: true
 ---
-# Policy Controls as Code with Catala
+# Internal Controls as Code with Catala
 
 The introduction of Infrastructure as Code (IaC) meant a radical change on how we understood infrastructure, driving
 tremendous transformations in technology and breaking what we thought were foundamental silos in our organization

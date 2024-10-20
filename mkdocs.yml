@@ -10,9 +10,10 @@ not_in_nav: |
   /disclaimer.md
 
 theme:
-    favicon: assets/images/favicon.ico
+    favicon: assets/images/favicon.svg
     features:
         - content.footnote.tooltips
+        - navigation.indexes
     #- content.code.copy
     #- navigation.sections
     #- navigation.top
