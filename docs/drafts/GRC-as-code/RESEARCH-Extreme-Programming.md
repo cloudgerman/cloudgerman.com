@@ -1,6 +1,4 @@
-# Food for thought
-
-## Extreme Programming: A Humanistic Discipline of Software Development
+# Extreme Programming: A Humanistic Discipline of Software Development
 
 [Source](http://www.damiantgordon.com/Courses/ISE/Papers/Extreme%20Programming%20A%20Humanistic%20Discipline%20of%20Software%20Development.pdf)
 
