@@ -12,7 +12,8 @@ NORMAL=$(tput sgr0)
 BIN=$(dirname -- $(readlink -f -- $0))
 echo "BIN: $BIN"
 
-VENV_DIR="$BIN/../.$(basename $(dirname $BIN))"
+# VENV_DIR="$BIN/../.$(basename $(dirname $BIN))"
+VENV_DIR="$BIN/../.venv"
 echo "VENV: $VENV_DIR"
 
 OS=$(uname -o)
